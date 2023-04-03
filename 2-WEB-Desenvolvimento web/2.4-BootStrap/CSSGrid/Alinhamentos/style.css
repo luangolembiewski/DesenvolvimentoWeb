@@ -1,0 +1,59 @@
+/* Resetar */
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    background: black;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+                    /* CONTENT */
+    /* justify-content: start; *//* alinha inicio */
+    /* justify-content: end; *//* alinha fim */
+    /* justify-content: center; *//* alinha centro */
+    /* justify-content: stretch; *//* alinha padrao */
+    /* justify-content: space-between; *//* espaço entre */
+    /* justify-content: space-around; *//* espaço ao redor */
+    /* justify-content: space-evenly; *//* espaço continuo */
+
+    /* align-content: start; *//* alinha inicio */
+    /* align-content: end; *//* alinha fim */
+    /* align-content: center; *//* alinha centro */
+    /* align-content: stretch; *//* alinha padrao */
+    /* align-content: space-between; *//* espaço entre */
+    /* align-content: space-around; *//* espaço ao redor */
+    /* align-content: space-evenly; *//* espaço continuo */
+
+                    /* ITEMS */
+    /* justify-itens: start; *//* alinha inicio */
+    /* justify-itens: end; *//* alinha fim */
+    /* justify-itens: center; *//* alinha centro */
+    /* justify-itens: stretch; *//* alinha padrao */
+
+    /* align-itens: start; *//* alinha inicio */
+    /* align-itens: end; *//* alinha fim */
+    /* align-itens: center; *//* alinha centro */
+    /* align-itens: stretch; *//* alinha padrao */
+
+                /* SELF > aplicado direto no item*/
+}
+.container > div {
+    background-color: #7159c1;
+    width: 100px;
+    height: 100px;
+        
+    /* SELF 
+    justify-self: center;
+    justify-self: end; 
+    */
+
+
+}

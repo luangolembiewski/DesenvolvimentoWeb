@@ -1,0 +1,69 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    box-sizing: border-box;
+}
+body p{color: white;}
+#pai{
+    width: 1fr;
+    height: 50vh;
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    
+    /* FlexBox */
+    display: flex;
+
+    /* Direção do flex (row/column/row-reverse/column-reverse)*/
+    flex-direction: row; 
+
+    /* Definir se a filha vai aceitar a quebra de conteúdo (Se o conteúdo filho esceder o with do pai ele se adapta ou quebra pra proxima linha "Muito usado em MOBILE") 
+        wrap(quebra linha)
+        no-wrap(não quebra)
+        wrap-reverse(quebra linha e inverte a ordem)
+    */
+    flex-wrap: wrap;
+
+    /* alinhamento X 
+        flex-start
+        flex-end
+        space-around(Destribui um distanciamento
+        space-between(Distanciamento sem laterais
+    */
+    justify-content: flex-start;
+
+    /* alinhamento Y
+        flex-start
+        flex-end
+        strech (Vai do topo até o final alongando)
+        baseline (alinhamento com base no conteúdo)
+    */
+    align-items: flex-start;
+}
+.filho{
+    /* width: 50px; */
+    height: 50px; 
+    margin: 10px;
+    background: rgb(107, 107, 107);
+    /* Propriedade Flex (Escala )*/
+    flex-grow: 0; /* Ocupa o resto da largura da DIV */
+    flex-shrink: 1; /* Encolhe a DIV */
+    flex-basis: 100px; /* Define um width de cada elemento caso não tenha */
+    /* Shortcut */
+    flex: 0 1 100px;
+}
+
+/* Ordenação ":nth-child()" */
+.filho:nth-child(1){
+    flex-grow: 1;
+    order: 1;
+}
+.filho:nth-child(2){
+    order: 3;
+}
+.filho:nth-child(3){
+    order: 2;
+}

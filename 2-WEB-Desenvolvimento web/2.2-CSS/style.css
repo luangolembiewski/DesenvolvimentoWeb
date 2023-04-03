@@ -1,0 +1,130 @@
+#r{
+    color: rgb(255,0,0);
+}
+#g{
+    color: rgb(0,255,0);
+}
+#b{
+    color: rgb(0,0,255);
+}
+#a{
+    color: rgba(0,0,0,0.3);
+}
+li{
+    font-size: 30px;
+}
+
+.quadrado{
+    background-color: aqua;
+}
+#px{
+    width: 100px;
+    height: 100px;
+}
+#pct{
+    width: 20%;
+    height: 20%;
+}
+#em{
+    width: 2em;
+    height: 2em;
+}
+#rem{
+    width: 4rem;
+    height: 4rem;
+}
+#bd{
+    border: 5px solid blue;
+    width: 100px;
+    height: 100px;
+}
+.bdQuad{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.bdQuadM{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+}
+.bdQuadP{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+.bdQuadPM{
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: blueviolet;
+}
+
+.block{
+    background-color: aqua;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.inline{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+.Inline-Block{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.none{
+    display: none;
+}
+#fltD{
+    float: right;
+}
+#fltE{
+    float: left;
+}
+#dv{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100px;
+}
+#dvOf{
+    
+}
+.dvLr{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border: 5px solid black;
+}
+#dvV{
+    overflow: visible;
+}
+#dvH{
+    overflow: hidden;
+}
+#dvS{
+    overflow: scroll;
+}
+#dvA{
+    overflow: auto;
+}
+.primeiro-bloco{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+.segundo-bloco{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}

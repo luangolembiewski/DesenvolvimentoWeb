@@ -1,0 +1,53 @@
+/* Resetar */
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+/* Tornar container Grid */
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* fr = flex */
+    grid-template-rows: 20vh 70vh 10vh;  /*vh = vision height(Altura que estou vendo) */
+    /* grid-gap: 10px 50px;  espaçamento entre linhas e colunas*/
+    grid-template-areas:    "hea hea"
+                            "ma as"
+                            "foo foo"
+
+}
+/* Deixar visivel */
+header{
+    background: yellow;
+    /* Forma não compacta
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+
+    /* shortcut compacta*/
+    /* grid-column: 1/3;
+    grid-row: 3/4; */
+    grid-area: hea;
+}
+main{
+    background: blue;
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-area: ma;
+}
+aside{
+    background: green;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    grid-area: as;
+}
+footer{
+    background: red;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-area: foo;
+}
+
+
+

@@ -1,0 +1,8 @@
+Esconder Explorador lateral=            Ctrl+B
+Cria padrão HTML =                      ! + Enter
+Comentar =                              Shift+Alt+A
+Duplicar linha =                        Shift + Alt + ArrowUp/ArrowDown
+Selecionar linha pro começo/final =     Shift+Home/End
+Criar tag com id/class =                tag+#id/.class
+Envelopar Tag =                         Ctrl+Shift+P+Enter
+Texto aleatorio=                        lorem

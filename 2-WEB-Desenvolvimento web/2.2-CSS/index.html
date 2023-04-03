@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- p{     seletor
+    color: red;
+}   Propriedade, valor
+ -->
+
+<!-- Existe 3 Formas de declarar CSS
+-Propriedade de um elemento HTML - style(CSS inline) não aconcelhavel pra declarar uma página ao todo
+-Como tag de HTML - tag style dentro da head
+-Arquivo separado - link:css
+
+Se for declarado 2 vezes ele segue a ordem
+id=seleção de 1 elemento
+class=seleção de varios elementos
+
+Varios HTML podem usar um mesmo css -->
+
+
+    <li>RGB - R=red G=green B=blue : 0-255 - A=alpha : transparencia : 0-1</li>
+    <p id="r">Mensagem em vermelho</p>
+    <p id="g">Mensagem em verde</p>
+    <p id="b">Mensagem em azul</p>
+    <p id="a">Mensagem opaca</p>
+
+    <hr>
+    <div>
+        <li>Margin/Border/Padding</li>
+        <img src="image/css.png" alt="css">
+    </div>
+    <hr>
+    <!-- 
+        Width= largura
+        height=altura
+     -->
+     <li>Unidades de medidas: px-%-pt</li>
+    <div id="px" class="quadrado"><p>Pixels</p></div><!-- tamanho absoluto -->
+    <div id="pct" class="quadrado"><p>%</p></div><!-- tamanho relativo -->
+    <div id="em" class="quadrado"><p>em</p></div><!-- tamanho escalavel ao ultimo container -->
+    <div id="rem" class="quadrado"><p>rem</p></div><!-- tamanho escalavel a cofiguração padrão do navegador -->
+
+    <hr>
+    <li id="bd">Border</li>
+    <hr>
+    <div class="bdQuadM">
+        <div class="bdQuadPM">
+            Margin
+            <!-- link -> nao respeita margin -->
+        </div>
+    </div>
+    <div class="bdQuad">
+        <div class="bdQuadP">
+            Padding
+        </div>
+    </div>
+    <hr>
+    <li>Display/Position/Float/Overflow</li>
+    <!-- Display= defini a maneira que cada elemento deve ser exibido que padrão é em blocos um abaixo do outro -->
+    <!-- USAR DISPLAY NO ELEMENTO QUE VAI SE ADAPTAR(NÃO NO BLOCO) -->
+    <h2>Tipos de Display:</h2>
+    <h3>Block:</h3>
+    <p class="block">block1</p> <!-- blocos -->
+    <p class="block">block2</p>
+    <p class="block">block3</p>
+    <h3>Inline:</h3>
+    <p class="inline">inline1</p> <!-- Na linha -->
+    <p class="inline">inline2</p>
+    <p class="inline">inline3</p>
+    <h3>Inline-Block:</h3>
+    <p class="Inline-Block">Inline-Block1</p> <!-- Inline-Block -->
+    <p class="Inline-Block">Inline-Block2</p> 
+    <p class="Inline-Block">Inline-Block3</p> 
+    <h3>None:</h3>
+    <p class="none">none</p> <!-- Não é exibido -->
+    <h2>Comportamento display com Ancoras/label/inputs:</h2>
+    <h3>Padrão:</h3>
+    <a href="facebook.com">face1</a> <!-- padrão -->
+    <a href="facebook.com">face2</a>
+    <a href="facebook.com">face3</a>
+    <h3>Block:</h3>
+    <a href="youtube.com" class="block">youtube1</a> <!-- blocos -->
+    <a href="youtube.com" class="block">youtube2</a> 
+    <a href="youtube.com" class="block">youtube3</a> 
+    <h3>Inline:</h3>
+    <a href="google.com" class="inline">google1</a> <!-- Inline -->
+    <a href="google.com" class="inline">google2</a> 
+    <a href="google.com" class="inline">google3</a> 
+    
+    <!-- Block = usado em label,âncora e inputs -->
+    <!-- Inline = usado em outros elementos -->
+
+    <hr>
+
+    <h2>Position</h2>
+    <!-- Text Align = Alinhar conteúdo do elemento -->
+    <li>Position = Posicionamento dos elementos</li>
+    <p>Relative (Padrão)= Possui relação com elemento Pai</p>
+    <p>Absolut = Ignora a posição Hierarquica - faz referencia ao navegador da página(Flutua na página)</p>
+    <p>Fixed = Elemento fica fixo na página acompanhando o Scroll</p>
+    
+    <hr>
+
+    <h2>Float</h2> <!-- Semelhante ao inline, porem inline adiciona tudo a frente até caber -->
+    <p>Faz com que o elemento fique flutuando dentro do elemento pai:</p>
+    <div id="dv">
+        <p id="fltE">Na Esqueda1-</p>
+        <p id="fltE">Na Esqueda2-</p>
+        <p id="fltD">Na Direita1-</p>
+        <p id="fltD">Na Direita2-</p>
+    </div>
+    
+    <hr>
+    <h2>Overflow</h2>
+    <!-- Solução para estouro de conteúdo -->
+    <h3>Visible:</h3>
+    Essa Declaração defini que mesmo que o conteúdo não caiba ele aparecerá mesmo assim.
+    <h3>Hidden:</h3>
+    Essa Declaração defini que o conteúdo que couber será apresentado, já o conteúdo que exceder será oculto.
+    <h3>Scroll:</h3>
+    Essa Declaração sempre exibe uma barra de scroll para que o usuario visualize mesmo que não exceda
+    <h3>Auto:</h3>
+    Essa Declaração caso o conteúdo exceda, exibe uma barra de scroll para que o usuario visualize 
+    <div id="dvOf">
+        <div id="dvV" class="dvLr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste magni soluta unde nam dolorem necessitatibus quae itaque! Exercitationem cupiditate tempora voluptatem dicta voluptates nostrum odit nisi quod facilis repellendus.
+        </div>
+        <div id="dvH" class="dvLr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste magni soluta unde nam dolorem necessitatibus quae itaque! Exercitationem cupiditate tempora voluptatem dicta voluptates nostrum odit nisi quod facilis repellendus.
+        </div>
+        <div id="dvS" class="dvLr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste magni soluta unde nam dolorem necessitatibus quae itaque! Exercitationem cupiditate tempora voluptatem dicta voluptates nostrum odit nisi quod facilis repellendus.
+        </div>
+        <div id="dvA" class="dvLr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste magni soluta unde nam dolorem necessitatibus quae itaque! Exercitationem cupiditate tempora voluptatem dicta voluptates nostrum odit nisi quod facilis repellendus.
+        </div>
+    </div>
+    <hr>
+    <h2>DIV</h2>
+    <div class="primeiro-bloco"></div>
+    <div class="segundo-bloco"></div>
+    <h2>NAV</h2>
+    <p>Usado pra fazer um grupo de links</p>
+</body>
+</html>

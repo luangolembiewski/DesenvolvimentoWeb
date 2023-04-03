@@ -1,0 +1,189 @@
+<!-- 
+3 Formas de inclusão do JS
+-No elemento HTML
+-Na tag <script>
+-No arquivo externo
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h2>Opções de inclusões JS</h2>
+    <li>Direto no elemento</li> 
+    <button type="button" onclick='document.write("Hello JavaScript")'>Click Me!</button> 
+    <li>Tag Script</li>
+    <input type="button" value="Click" onclick="mensagem()">
+    <script>
+        function mensagem(){
+            document.write("Hello JavaScript")
+        }
+    </script>
+    <li>Documento Externo</li>
+    <p>&ltscript src="script.js"&gt&lt/script&gt&lt/p&gt</p>
+    <hr>
+    <h2>Async/defer</h2>
+    <h3>Problema:</h3>
+    <li>Problema do site pausar para executar o Script no meio da aplicação</li>
+    <img src="images/problem.png" alt="Problema">
+    <h3>Solução Async:</h3>
+    <li>Executa tudo de forma assíncrona o download e execução</li>
+    <img src="images/async.png" alt="Async">
+    <h3>Solução Defer:</h3>
+    <li>O download do Script é feito junto ao carrgamento da página, Porém a execução é feita ao final</li>
+    <img src="images/defer.png" alt="Defer">
+    <hr>
+    <h2>LOGs</h2>
+    <li>theads = sistema responsavel por executar programas em segundo plano</li>
+    <li>log = Registro</li>
+    <li>Console = Local de exibição do log</li>
+    <li>Chamada = console.log("Houve falha ao salvar o arquivo")</li>
+    <li>Variantes=  (OBS: ALTERA COR E CLASSIFICA COM A MENSAGEM QUE O USUÁRIO INFORMAR)
+        <br>Log: mensagem genérica
+        <br> Info: mensagem de informação
+        <br> Debug: mensagem de tipo depuração
+        <br> Warm:  mensagem de tipo alerta
+        <br> Error:  mensagem de tipo erro.      EX: console.error("Esta é uma msg de erro")</li>
+    <li>Event Viewer = visualizador de eventos do windows</li>
+    <li>Exemplo log Browser</li>
+    <img src="images/log.png" alt="Log Browser">
+    <hr>
+    <h2>Caixa de mensagens</h2>
+    <li>alert = somente a mensagem de alerta EX: alert("Seja bem vindo")</li>
+    <li>prompt = Exibe a mensagem de alerta e uma caixa de texto para captar dados do usuario Ex: let nome = prompt ("QUal seu nome?")</li>
+    <li>confirm = exibe a mensagem mais dois botões para entrada de true ou false do usuário</li>
+    <br>
+    <li>Alert (alert("texto exibir"))</li>
+    <input type="button" value="Alert" onclick="alert('Mensagem desejada')">
+    <li>Prompt (prompt("pergunta exibir"))</li>
+    <input type="button" value="Prompt" onclick="lerNome()">
+    <script> 
+        function lerNome(){
+            let nome = prompt("Qual seu nome?")
+            alert("Bem vindo "+nome)
+        }
+    </script>
+    <li>Confirm (confirm("pergunta exibir"))</li>
+    <input type="button" value="Confirm" onclick="lerConfirma()">
+    <script> 
+        function lerConfirma(){
+            let esc = confirm("Deseja realmente excluir?")
+            alert("Escolha: "+esc)
+        }
+    </script>
+   <hr>
+   <h2>KeyWords</h2>
+ 
+    <li><strong>VAR</strong> -> (Escopo global é acessada de qualquer local dentro da aplicação e pode ser chamada até mesmo antes da sua criação)</li>
+    <li><strong>LET</strong> -> (Não permite que a variavel seja chamada antes de sua criação, Como acontece com Var), (não permite que a variavel seja acessada fora do seu escopo: escopo local)</li>
+    <li><strong>CONST</strong> -> possui a segurança da let, porem não pode ser modificada, sendo associada ao primeiro valor de criação (só é possivel alterar seu valor em nível secundario)</li>
+   
+    <h3>Diferença var e let</h3>
+    <img src="images/varLet.png" alt="">
+    <img src="images/varLet2.png" alt="">
+    <br>
+    <h3>Exemplo const</h3>
+    <img src="images/const.png" alt="">
+    <img src="images/const2.png" alt="">
+    <img src="images/const3.png" alt="">
+    <hr>
+    <h2>Variáveis</h2>
+    <li><strong>CamelCase:</strong></li>
+    <p>Boas práticas: nome de cada palavra da variável começa com letra maiúscula
+    Ex: nomeAluno, idadeAluno</p>
+    <li><strong>Proibido:</strong></li>
+    <p>Usar caracteres especiais, palavras especiais, INICIAR com numeros(permitido em qualquer outro local, menos no inicio)</p>
+    <li><strong>Propriedades:</strong></li>
+    <p>ver tipo da variável: typeof()</p>
+    <p>JS o tipo de dado é dinamico:</p>
+    <img src="images/dinamico.png" alt="">
+    <hr>
+    <h3>Operadores:</h3>
+    <p>-= : ele menos 1</p>
+    <p>-- : menos 1</p>
+    <p>+= : ele mais 1</p>
+    <p>++ : mais 1</p>
+    <p>*= : ele vezes alguem</p>
+    <p>/= : ele dividido por alguem</p>
+    <img src="images/operadores.png" alt="">
+    <h3>Operadores lógicos:</h3>
+    <img src="images/operadoresLogicos.png" alt="">
+    <hr>
+    <h2>Estruturas condicionais:</h2>
+    <h3>If Else</h3>
+    <h3>Switch case:</h3>
+    <p>Break: quebra a repetição</p>
+    <p>Default: padrão executara caso nenhuma seja correta</p>
+    <hr>
+    <h2>Estruturas de loops:</h2>
+    <h3>While: enquanto</h3>
+    <img src="images/while.png" alt="">
+    <h3>For: para</h3>
+    <img src="images/for.png" alt="">
+    <hr>
+    <h3>Array</h3>
+    <h2>Propriedades:</h2>
+    <li>nomeArray.push() > Adicionar</li>
+    <li>nomeArray.shift() > remove o primeiro elemento</li>
+    <li>nomeArray.pop() > remove o ultimo elemento</li>
+    <li>nomeArray.splice(x,y) > remove um elemento especifico(x=posição inicial, y= quantidade de elementos)</li>
+    <li>nomeArray.lenght > retorna o tamanho do Array</li>
+    <li>nomeArray.sort() > ordena o array por ordem alfabetica</li>
+    <hr>
+    <h2>DOM</h2>
+    <img src="images/dom.png" alt="">
+    <h3>Window</h3>
+    <img src="images/window.png" alt="">
+    <h3>Document</h3>
+    <img src="images/document.png" alt="">
+    <h3>Element</h3>
+    <img src="images/element.png" alt="">
+    <h2>JQUERY: biblioteca de atalhos para simplificar js</h2>
+    <img src="images/jquery.jpg" alt="">
+    <h2>EVENTOS</h2>
+    <img src="images/eventos.png" alt=""><img src="images/eventosRes.png" alt="">
+    <hr>
+    <h2>Funções:</h2>
+    <img src="images/funcao.png" alt="">
+    <h3>Data: Date() Retorna: Wed Aug 19 2020 19:27:48 GMT-0300</h3>
+    <img src="images/date.png" alt="">
+    <h3>Função Anonima: <br><img src="images/funcaoAnonima.jpg" alt=""></h3>
+    <h3>Função Nomeada: <br><img src="images/funcaoNomeada.jpg" alt=""></h3>
+    <h3>Arrow Function: (funções de seta) <br><img src="images/funcaoSeta.jpg" alt=""></h3>
+    <h4>Redução maxima Arrow function</h4>
+    <img src="images/funcaoSetaReduzida.jpg" alt="">
+    <hr>
+    <h2>Métodos do objeto STRING:</h2>
+    <img src="images/metString.png" alt="">
+    <hr>
+    <h2>JSON</h2>
+    <p>Apresentação: uma redução de Javascript: o JSON é utilizado em todas as linguagens de programação, inclusive em bancos de dados. para trocas de dados simples.</p>
+    <p>Com ele, é possível representar e transferir dados entre clientes e servidores, ou ainda, entre aplicações que precisam se comunicar. Os dados ficam estruturados em hierarquias e armazenados em pares de chave-valor.</p>
+    <p><strong>Propriedades:</strong> Ao atibuir json a uma variável, ela se torna um objeto / Como objeto Json, ela herda todos os objetos da classe mãe / cada atributo do JSON torna-se um atributo da variável</p>
+    <img src="images/json.png" alt="">
+    <h3>Partes Json</h3>
+    <p>{} > As chaves {} delimitam um objeto. Logo, no exemplo anterior, temos um objeto.</p>
+    <p>: > Os dois pontos “:” separam chaves e valores.</p>
+    <p>, > As vírgulas "," separam os pares de chaves/valores.</p>
+    <p>[] > Os colchetes [] delimitam um array</p>
+    <h3>hierarquia</h3>
+    <img src="images/jsonHierarquia.png" alt="">
+    <h3>Conjunto de objetos:</h3>
+    <img src="images/jsonObjetos.png" alt=""> 
+    <h2>Função em JSON:</h2>
+    <img src="images/jsonFuncao.jpg" alt="">
+    <h2>Conversão String/Json</h2> 
+    <img src="images/stringJson.jpg" alt="">
+    <h2>Conversão Json/String</h2> 
+    <img src="images/jsonString.jpg" alt="">
+    <hr>
+    <h2>XML</h2>
+    <p>Apresentação: Estrutura usada antes do JSON, semelhante ao json, Porem utilizando Tags</p>
+    <img src="images/xml.png" alt="">
+
+ </body>
+ </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>  <!--Cabeçalho-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    <!--Chamar CSS-->
+    <script src=""></script>                    <!--Chamar JS-->
+    <title>Titulo</title>
+</head>
+<body>  <!--Corpo-->
+    <p><a href="Eletro/index.html" title="Projeto Central" target="_blank">Projeto Que sera Desenvolvido ao longo do curso</a></p>
+    <p><a href="Semantica/index.html" target="_blank">Tags Semanticas</a></p>
+    <main> <!-- Conteúdo principal da página (entre o rodapé e o cabeçalho)  TAG SEMANTICA-->
+            <!--COMENTAR Atalho Shift+Alt+A--> 
+        <h1>Titulo H(1-6)</h1>
+        <p>Paragrafo</p>
+        <hr> <!-- Linha de separação -->
+        <strong>Negrito</strong>
+        <em>Itálico</em>
+        <ins>sublinhado</ins>
+        <small>Pequeno</small>
+        <sup>Sobrescrita</sup>
+        <sub>subescrita</sub>
+        <del>Rescado</del>
+        <p>Texto aleatório <strong>LOREM</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, reprehenderit! Repellendus delectus eum fuga unde nihil ipsa sed, dicta ullam aperiam illo molestiae a eaque reiciendis odit culpa eos ex?</p> 
+        <!-- *=quantidade da mesma tag que queira inserir -->
+        <!-- #=ID -->
+        <!-- .=Class -->
+        <p style="color:red;font-size: xx-large;text-align: center;">Inserindo css no HTML com Style</p>
+        <a href="AtalhosVSCode.txt" title="Atalhos" target="_blank">HyperLink(Ancora)</a>
+        <!-- 
+            href=   link que sera direcionado 
+            title=  Mensagem que aparece quando o mouse é passado sobre o link
+            targer= define o alvo: 
+                    _self: link referencia a mesma página
+                    _blank: link referencia em uma nova página
+                    _parent e _top: link referencia iframes (pouco usado)
+            Remover decoração do link: css:text-decoration: none;
+        -->
+        <hr>
+        <h2>NAV = Grupo de links</h2>
+            <nav>
+                <a href="AtalhosVSCode.txt">Atalhos VSCode</a>
+                <a href="Tags.html">Tags</a>
+            </nav>
+        <hr>
+        <abbr title="ABBR = Tag de exibição de referencia">Tag ABBR "Passe o mouse em cima!"</abbr>
+        <h2>Tabela</h2>
+        <table style="border:1px solid red"> <!-- Tabela -->
+            <tr> <!-- Linha -->
+                <th>Nome da coluna</th> <!-- TH Título da tabela(Opcional) -->
+                <th>Nome da coluna2</th>
+                <th rowspan="2">Nome da coluna3</th><!-- rowspan esticar linha para baixo -->
+                <!-- colspan="2" =  -->
+            </tr>
+            <tr>
+                <td>Conteúdo da linha</td>  <!-- dados da tabela -->
+                <td>Conteúdo da linha2</td>
+                <td>Conteúdo da linha3</td>
+                <td colspan="2">Conteúdo da linha4</td><!-- colspan esticar linha para o lado -->
+            </tr>
+            <!-- OPCIONAIS (thead=head da tabela) (tbody=body da tabela tfoot=Rodape da tabela) -->
+        </table>
+        <hr>
+        <h2>Lista não ordenada</h2>
+        <ul>
+            <li>Café</li>
+            <li>Leite</li>
+        </ul>
+        <h2>Lista Ordenada</h2>
+        <ol>
+            <li>Café</li>
+            <li>Leite</li>
+        </ol>
+        <a href="https://erikasarti.com/html/acentuacao-caracteres-especiais/" target="_blank">Site de caracteres especias</a>
+
+        <hr>
+        <!-- FORMULARIOS = usado como coletor de dados de entrada do usuário -->
+        <h2>Formulários</h2>
+        <form action="/endereco_do_servidor.php">
+            <label for="nome">Nome:</label>                         <!-- Label=Rótulo -->
+            <input type="text" id="nome" placeholder="Escreva aqui seu nome">                           <!-- type="text" --> <!-- Placeholder= Exemplo do que escrever -->
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="nome" placeholder="************">                           <!-- type="password" --> <!-- Placeholder= Exemplo do que escrever -->
+
+            <br>
+            <label for="idade">Idade:</label>  
+            <input type="number" id="idade">                         <!-- type="number" -->
+            <br>
+
+            <label for="nasc">Nascimento:</label>  
+            <input type="date" id="nasc">                            <!-- type="date" -->
+            <br>
+
+            <label for="sexo">Sexo:</label>  
+            <input type="radio" id="m" value="masc" name="sexo">     <!-- type="radio" -->
+            <label for="m">Masculino</label>  
+            <input type="radio" id="f" value="fem" name="sexo">     
+            <label for="m">Feminino</label>  
+            <br>
+
+            <label for="cor">Cor preferida:</label>  
+            <input type="color" id="cor">                           <!-- type="color" -->
+            <br>
+
+            <input type="button" value="Enviar">                    <!-- type="button" -->
+            <br>
+
+            <label for="texto">Digite seu texto:</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Você pode digitar seu texto aqui"></textarea> <!-- TextArea input para textos grandes -->
+
+        </form>
+        <hr>
+    </main>
+
+    <hr>
+    <Footer style="text-align: center; width: 100%;position: absolute;"> <!-- Rodapé -->
+        <p>&copy; &lt Luan Golembiewski &gt </p>                            <!-- Caracteres Especiais (&copy/&lt/&gt)-->
+    </Footer>
+</body>
+</html>
