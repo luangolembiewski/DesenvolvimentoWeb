@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        .text-red{
+            color:red
+        }
+    </style>
 </head>
 
 <body>
@@ -37,13 +45,102 @@
     <h3><a href="https://www.microsoft.com/pt-br/sql-server/sql-server-downloads">Download SQL Server</a></h3>
     <h3>Tipos de Dados</h3>
     <h4><a href="https://learn.microsoft.com/pt-br/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15">Documentação oficial</a></h4>
-    <img src="3-BD-SQL Server/images/carac.png" alt="">
-    <img src="3-BD-SQL Server/images/int.png" alt="">
-    <img src="3-BD-SQL Server/images/dec.png" alt="">
-    <img src="3-BD-SQL Server/images/float.png" alt="">
-    <img src="3-BD-SQL Server/images/money.png" alt="">
-    <img src="3-BD-SQL Server/images/date.png" alt="">
-    <img src="3-BD-SQL Server/images/bit.png" alt="">
+    <img src="images/carac.png" alt="">
+    <img src="images/int.png" alt="">
+    <img src="images/dec.png" alt="">
+    <img src="images/float.png" alt="">
+    <img src="images/money.png" alt="">
+    <img src="images/date.png" alt="">
+    <img src="images/bit.png" alt="">
+
+    <hr>
+    <h2>Propriedades</h2>
+    <h3>
+        <li>PK: Primary Key, chave primária, chave indice</li>
+        <li>AI: Auto-increment, tabela sera incrementada automaticamente</li>
+        <li>UK: Unique Key, chave unica, não se pode existir outra igual na mesma coluna</li>
+        <li>NN: Not Null, Campo não pode ser nulo(vazio)</li>
+    </h3>
+    <hr>
+    <h2>Criando banco de dados no SQL Server:</h2>
+    <h3>Software usado: Microsoft SQL Server Management Studio</h3>
+    <h3>Criação: Entre na pasta banco de dados e crie um novo > entre nele vá até a pasta Segurança/Esquema e crie um novo Schema > volte na pasta Tabela e cria sua tabela vinculando ao esquema</h3>
+    <hr>
+    <h2>Os recursos e comandos do SQL são disponibilizados e agrupados em 5 subgrupos:</h2>
+    <img src="images/dml.png" alt="">
+    <img src="images/dql.png" alt="">
+    <img src="images/ddl.png" alt="">
+    <img src="images/dcl.png" alt="">
+    <img src="images/dtl.png" alt="">
+    <hr>
+    <h2>Filtro</h2>
+    <h3>Where: onde, um filtro de condição</h3>
+    <hr>
+    <h2>Operadores condicionais</h2>
+    <img src="images/operadores.png" alt="">
+    <h2>Comando Like</h2>
+    <img src="images/like.png" alt="">
+    <h2>Comando %</h2>
+    <img src="images/porc.png" alt="">
+    <img src="images/porcEx.png" alt="">
+    <h2>Comando _</h2>
+    <img src="images/under.png" alt="">
+    <hr>
+    <h2>Operadores Lógicos</h2>
+    <li>AND: e, EX: Select * from pessoa where idade < 10 <strong>and</strong> peso > 60</li>
+    <li>OR: ou, EX: Select * from pessoa where idade < 10 <strong>or</strong> peso > 60</li>
+    <li>NOT: negação, EX: select * from pessoa where nome <strong>not</strong> like "P%"</li>
+    <li>NULL: Vazio, EX: select * from pessoa where peso <strong>is null</strong></li>
+    <hr>
+    <h2>Comandos</h2>
+    <h3>Insert: inserir novos registros</h3>
+    <h4>
+        <li>
+            Estrutura= INSERT INTO <campos>, <...> VALUES (<valores>, <...>)
+        </li>
+        <li>
+            Exemplo= INSERT INTO cadastros.pessoa (nome, idade, peso, cpf) 
+
+            VALUES  ('José', '32', '66', ' 79628734008'), 
+
+                 ('João', '31', '67', ' 10508414091'),
+
+                 ('Mario', '30', '68', ' 94773387025');
+        </li>
+    </h4>
+    <h3>Delete: Deletar registros</h3>
+    <h4><li>Exemplo= delete from pessoa where id = 5;</li></h4>
+    <h4 class="text-red">DICA IMPORTANTE:</h4>
+    <img src="images/dica.png" alt="">
+    <h3>Update: Atualizar dados</h3>
+    <h4>
+        <li>
+            Estrutura= update pessoa
+
+            set campo = "valor"
+            
+            where &ltcondição&gt;
+        </li>
+        <li>    
+            Exemplo= alterarando dados do id 1: UPDATE pessoa 
+            SET nome="Ana Luiza", peso=44,idade=19
+            WHERE id=1;
+        </li>
+    </h4>
+    <h3>Exemplo</h3>
+    <h4>--Definindo o Banco de Dados <br>
+        USE Empresa <br> <br>
+        
+        --Inserindo <br>
+        INSERT INTO cadastro.Pessoa(Nome,CPF,Logradouro,Numero,DataCadastro) Values('Luan','12345687','Rua das pedras',120,getdate()),('Roberto','98762563','Rua do pó',320,getdate()); <br>
+         <br> <br>
+        --Deletando <br>
+        DELETE FROM cadastro.Pessoa WHERE Nome='Luan' <br> <br>
+        --Atualizando <br>
+        UPDATE cadastro.Pessoa SET nome='Nareba' WHERE nome='Roberto'; <br> <br>
+        
+        --Exibindo <br>
+        SELECT * FROM cadastro.Pessoa</h4>
 </body>
 
 </html>
