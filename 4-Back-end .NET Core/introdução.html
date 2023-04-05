@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color:red
+        }
+        .space{
+            margin: 0;
+            margin-left: 10px;
+        }
+        .space2{
+            margin: 0;
+            margin-left: 20px;
+        }
+        .space3{
+            margin: 0;
+            margin-left: 30px;
+        }
+        .space4{
+            margin: 0;
+            margin-left: 40px;
+        }
+        .space5{
+            margin: 0;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Linguagem C#</h1>
+    <h2>O csharp utiliza uma maquina virtual para execução chamada CLR(Common Intermediate Language), que gerencia a
+    execução</h2>
+
+    <li>Para criar um projeto abra o terminar e entre na pasta desejada, após execute o comando: "dotnet new console"</li>
+    <li>Para executar use o comando "dotnet run"</li>
+
+    <h2>Comentarios</h2>
+    <li>Em linha //</li>
+    <li>Em bloco /* */</li>
+
+    <h2>Operadores aritméticos</h2>
+    <img src="images/opeArit.png" alt="">
+    <h3>Exemplo</h3>
+    int i = 3;<br>
+    Console.WriteLine(i);   // saída: 3 <br>
+    Console.WriteLine(i--); // saída: 3 <br>    <!-- Mostra depois altera -->
+    Console.WriteLine(i);   // saída: 2 <br>
+    Console.WriteLine(--i); // saída: 1 <br>    <!-- Altera depois mostra -->
+    <img src="images/opeComp.png" alt="">
+
+    <img src="images/opeLog.png" alt="">
+    <img src="images/opeIgua.png" alt="">
+    <hr>
+    <h2>Estrutura de controle</h2>
+    <h3>IF/ELSE (se/senão)</h3>
+    if( )<br>
+    {  } <br>
+    else <br>
+    {  }
+    <h3>SWITCH/CASE (Faça/caso)</h3>
+    switch( ) <br>
+    { 
+        <p class="space">case 1: </p>
+        <p class="space2">break;</p>
+        <p class="space">case 2: </p>
+        <p class="space2">break;</p>
+        <p class="space">default:</p> 
+        <p class="space2">break;</p>
+    }
+    <hr>
+    <h2>Estrutura de repetição</h2>
+    <h3>FOR (Para)</h3>
+    for(int i=0; i&lt5; i++) <br>
+    {    }
+    <h3>WHILE (Enquanto)</h3>
+    int x=0; <br>
+    while( x&lt10) <br>
+    { <br>
+        <p class="space">x++</p> 
+    }
+    <h3>DO WHILE (Faça/Enquanto)</h3>
+    <h4>Quase como o while porem sempre executa uma vez</h4>
+    int x=0; <br>
+    do <br>
+    { <br>
+        <p class="space">x++</p> 
+    } while (n&lt5)
+    <h3>FOR EACH (PARA PERCORRER)</h3>
+    <h4>Usado para percorrer elementos inteiros</h4>
+    var fibNumbers = new List<int> { 0, 1, 1, 2, 3, 5, 8, 13 }; <br>
+    int count = 0; <br>
+    foreach (int element in fibNumbers) <br>
+    {
+        <p class="space">Console.WriteLine($"Elemento #{count}: {element}");</p>
+        <p class="space">count++;</p>
+    }
+    <hr>
+    <h2>Instale o pacote os pacotes e rode na API ou Direto</h2>
+    <h2>Desenvolvendo WebApi com .Net: <a href="https://www.youtube.com/watch?v=onsiuwDuUKs&ab_channel=2Guarinos" target="_blank">video</a></h2>
+    
+
+</body>
+
+</html>
